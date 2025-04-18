@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #svg circle {
+            stroke-dashoffset: 0;
+            transition: stroke-dashoffset 1s linear;
+            stroke: #666;
+            stroke-width: 1em;
+        }
+
+        #svg #bar {
+            stroke: #ff9f1e;
+        }
+
+        #cont {
+            display: block;
+            height: 86px;
+            width: 86px;
+            margin: 1em auto;
+            box-shadow: 0 0 1em black;
+            border-radius: 100%;
+            position: relative;
+        }
+
+        body {
+            font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+            background-color: #0d0d0d;
+            color: #fff;
+            height: 100%;
+            padding-top: 2em;
+            text-align: center;
+        }
+        svg{
+            width: 86px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        
+    <div class="cont" data-current="04" data-total="20">
+        <svg width="200" height="200" viewBox="0 0 200 200">
+          <circle r="90" cx="100" cy="100" fill="transparent" stroke="#444" stroke-width="15" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+          <circle class="bar" r="90" cx="100" cy="100" fill="transparent" stroke="orange" stroke-width="15" stroke-dasharray="565.48" stroke-dashoffset="565.48"></circle>
+          <text class="progressText" x="100" y="115" text-anchor="middle" fill="white" font-size="30" font-family="Arial">00/02</text>
+        </svg>
+        <input type="number" class="currentInput" min="0" max="99" />
+      </div>
+      <div class="cont" data-current="0" data-total="30">
+        <svg width="200" height="200" viewBox="0 0 200 200">
+          <circle r="90" cx="100" cy="100" fill="transparent" stroke="#444" stroke-width="15" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+          <circle class="bar" r="90" cx="100" cy="100" fill="transparent" stroke="orange" stroke-width="15" stroke-dasharray="565.48" stroke-dashoffset="565.48"></circle>
+          <text class="progressText" x="100" y="115" text-anchor="middle" fill="white" font-size="30" font-family="Arial">00/02</text>
+        </svg>
+        <input type="number" class="currentInput" min="0" max="99" />
+      </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+ $(document).ready(function () {
+  $(".cont").each(function () {
+    const $cont = $(this);
+    const $circle = $cont.find(".bar");
+    const $text = $cont.find(".progressText");
+    const $input = $cont.find(".currentInput");
+
+    const r = $circle.attr("r");
+    const c = Math.PI * (r * 2);
+    $circle.css({ strokeDasharray: c });
+
+    const total = parseInt($cont.attr("data-total"));
+    let current = parseInt($cont.attr("data-current"));
+
+    function updateUI(currentVal) {
+      if (currentVal < 0) currentVal = 0;
+      if (currentVal > total) currentVal = total;
+
+      const offset = ((total - currentVal) / total) * c;
+      $circle.css({ strokeDashoffset: offset });
+
+      const curStr = String(currentVal).padStart(2, "0");
+      const totalStr = String(total).padStart(2, "0");
+      $text.text(`${curStr}/${totalStr}`);
+    }
+
+    if (!isNaN(current)) {
+      updateUI(current);
+    }
+
+    $input.on("input", function () {
+      const currentVal = parseInt($(this).val());
+      if (!isNaN(currentVal)) {
+        updateUI(currentVal);
+      }
+    });
+  });
+});
+
+</script>
+</body>
+
+</html>
