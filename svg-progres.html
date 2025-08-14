@@ -43,7 +43,26 @@
 
 <body>
     <div>
-        
+      <div class="cont" data-current="04" data-total="20">
+  <svg width="200" height="200" viewBox="0 0 200 200">
+    <!-- Outer track (gray background) -->
+    <circle r="90" cx="100" cy="100" fill="transparent" stroke="#FFF" stroke-width="15" />
+
+    <!-- Progress arc -->
+    <circle class="bar" r="90" cx="100" cy="100" fill="transparent"
+            stroke="orange" stroke-width="25"
+            stroke-dasharray="565.48" stroke-dashoffset="565.48"
+            stroke-linecap="round" />
+
+    <!-- Inner circle (background fill with white border) -->
+    <circle r="75" cx="100" cy="100" fill="#2DBE82" stroke="#fff" stroke-width="12" />
+
+    <!-- Center Text -->
+    <text class="progressText" x="100" y="115" text-anchor="middle"
+          fill="white" font-size="25" font-family="Arial">04/20</text>
+  </svg>
+</div>
+
     <div class="cont" data-current="04" data-total="20">
         <svg width="200" height="200" viewBox="0 0 200 200">
           <circle r="90" cx="100" cy="100" fill="transparent" stroke="#444" stroke-width="15" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>

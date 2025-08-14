@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="assets/media/favicon/favicon.ico" />
+
+  <title>Hexia - Basic Details</title>
+
+  <!--begin::Global Stylesheets Bundle(used by all pages)-->
+  <link href="assets/css/plugins.bundle.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+  <!--end::Global Stylesheets Bundle-->
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css" />
+
+  <style type="text/css">
+    .time-custom[type="time"]::-webkit-calendar-picker-indicator {
+      background-image: url(assets/media/svg/time.svg);
+      background-position: center;
+      background-size: 20px;
+      background-repeat: no-repeat;
+    }
+  </style>
+
+</head>
+
+<body id="kt_body" class="bg-body">
+
+  <div class="d-flex flex-column flex-root">
+    <div class="d-flex flex-column flex-row-fluid pb-10 ">
+      <div class="border-bottom py-5 px-9 d-flex justify-content-between align-items-center ">
+        <a href="dashboard.html">
+          <img class="img-fluid w-80px h-60px" src="assets/media/logo/logo.svg" width="79" height="61">
+        </a>
+        <a href="index.html" class="fs-4 fw-500 text-black">
+          Logout
+        </a>
+      </div>
+      <div class="d-flex flex-center flex-column flex-column-fluid py-7 px-5 px-sm-10">
+        <div class="w-lg-850px">
+          <div class="card">
+            <div class="card-body p-6 p-sm-9">
+              <p class="fs-4 fw-normal text-muted step mb-3">Step <span id="currentStep">1</span> of 3</p>
+              <!-- first -->
+              <div id="first" class="tab" style="display: none;">
+                <h1 class="text-primary fs-1x fw-bold lh-base mb-3">
+                  Provide basic details to complete your profile
+                </h1>
+                <p class="fs-4 fw-normal text-black-50 mb-7">Provide basic details to complete your profile</p>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <label class="h-120px w-120px rounded-circle position-relative cursor-pointer mb-2">
+                      <input type='file' class="d-none imageUpload" accept=".png, .jpg, .jpeg" />
+                      <img src="assets/media/svg/add-img.svg"
+                        class="img-fluid h-120px w-120px rounded-circle object-fit-cover border imagePreview"
+                        width="120" height="120" alt="">
+                      <!-- <img src="assets/media/svg/edit.svg" class="img-fluid edit-absolute" width="32"
+                      height="32" alt=""> -->
+                    </label>
+                    <p class="fs-5 fw-normal text-muted step mb-7">Recommended size: Max 2MB. Accepted file formats:
+                      png, jpg and jpeg</p>
+                  </div>
+                </div>
+                <div class="row gy-5">
+                  <div class="col-lg-6">
+                    <label for="" class="text-black fs-4 fw-normal mb-2">First Name</label>
+                    <input class="form-control form-control-lg form-control-solid" type="text" name="text"
+                      autocomplete="off" placeholder="First Name" value="Leo" />
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="" class="text-black fs-4 fw-normal mb-2">Last Name</label>
+                    <input class="form-control form-control-lg form-control-solid" type="text" name="text"
+                      autocomplete="off" placeholder="Last Name" value="Selogy" />
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="" class="text-black fs-4 fw-normal mb-2">Lab Name</label>
+                    <input class="form-control form-control-lg form-control-solid" type="text" name="text"
+                      autocomplete="off" placeholder="Lab Name" value="Day Lewis Laboratory" />
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="" class="text-black fs-4 fw-normal mb-2">Phone Number</label>
+                    <div class="input-group input-group-solid">
+                      <span class="input-group-text p-0" id="basic-addon1"> <select
+                          class="form-select form-select-transparent" placeholder="..." id="kt_docs_select2_country">
+                          <option value="AF" data-kt-select2-country="assets/media/other/uk.webp" selected>+44</option>
+                          <option value="AX" data-kt-select2-country="assets/media/other/uk.webp">+91</option>
+                        </select></span>
+                      <input type="number" name="number"
+                        class="form-control form-control-lg form-control-solid border-start-0 ps-1" aria-label="Phone"
+                        placeholder="Phone" aria-describedby="basic-addon1" value="020 7123 4567" />
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="" class="text-black fs-4 fw-normal mb-2">Email Address</label>
+                    <input class="form-control form-control-lg form-control-solid" type="email" name="email"
+                      placeholder="Email Address" autocomplete="off" value="company@domain.com" disabled />
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="" class="text-black fs-4 fw-normal mb-2">Address</label>
+                    <input class="form-control form-control-lg form-control-solid" type="text" name="Address"
+                      autocomplete="off" placeholder="Type here..." value="" />
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="" class="text-black fs-4 fw-normal mb-2">Postcode</label>
+                    <input class="form-control form-control-lg form-control-solid" type="text" name="Address"
+                      autocomplete="off" placeholder="Type here..." value="" />
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="" class="text-black fs-4 fw-normal mb-2">City</label>
+                    <input class="form-control form-control-lg form-control-solid" type="text" name="Address"
+                      autocomplete="off" placeholder="Type here..." value="" />
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="" class="text-black fs-4 fw-normal mb-2">Country</label>
+                    <input class="form-control form-control-lg form-control-solid" type="text" name="Address"
+                      autocomplete="off" placeholder="Type here..." value="" />
+                  </div>
+                  <div class="col-lg-12">
+                    <label for="" class="text-black fs-4 fw-normal mb-2">About laboratory</label>
+                    <textarea class="form-control form-control-lg form-control-solid" type="text" name="Address"
+                      autocomplete="off" placeholder="Type here..." value="" rows="5"></textarea>
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="" class="text-black fs-4 fw-normal mb-3">Payment method</label>
+                    <div class="row">
+                      <div class="col-auto">
+                        <div class="form-check form-check-custom form-check-secondary">
+                          <input class="form-check-input  h-25px w-25px" type="checkbox" value="" id="flexCheckboxSm"
+                            checked />
+                          <label class="form-check-label fs-6 fw-normal text-black" for="flexCheckboxSm">
+                            Online
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="form-check form-check-custom form-check-secondary">
+                          <input class="form-check-input  h-25px w-25px" type="checkbox" value="" id="flexCheckboxSm"
+                            checked />
+                          <label class="form-check-label fs-6 fw-normal text-black" for="flexCheckboxSm">
+                            Offline
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <h2 class="text-info fs-1 fw-bold mb-1">
+                      Connect your stripe account
+                    </h2>
+                    <p class="fs-4 fw-normal text-primary me-md-19">Connect your stripe account for a easy and
+                      secure payment.</p>
+                    <div class="d-flex flex-wrap gap-2 align-items-center ">
+                      <a href="#" class="btn btn-lg btn-info py-5 fs-4"> <img src="assets/media/svg/stripe-logo.svg"
+                          width="20px" height="20px" alt=""> Connect
+                        stripe</a>
+                      <a href="#" class="fs-4 fw-bold text-primary ms-2">Skip for now</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 mt-11">
+                    <label for="" class="text-black fs-4 fw-normal mb-3">Upload required documents</label>
+                    <label class="card border-primary mb-4 cursor-pointer form__container position-relative w-lg-385px"
+                      id="upload-container">
+                      <div class="card-body text-center  p-6 p-md-9">
+                        <input class="position-absolute w-100 h-100 top-0 start-0 cursor-pointer opacity-0"
+                          id="upload-files" type="file" accept="image/*" multiple="multiple" />
+                        <img src="assets/media/svg/file-upload.svg" class="img-fluid mb-2" width="44" height="44"
+                          alt="">
+                        <h3 class="fs-4 fw-normal text-primary mb-3">Click to uplaod</h3>
+                        <span class="fs-6 fw-normal text-muted">Add PDF, EXL, Png, files</span>
+                      </div>
+                    </label>
+                    <div class="row g-4 form__files-container" id="files-list-container">
+                      <div class="col-auto form__file-container">
+                        <div
+                          class="card border rounded-1 h-100px w-100px h-sm-120px w-sm-120px position-relative d-flex justify-content-center align-items-center text-center">
+                          <img src="assets/media/other/pdf.webp" width="120" height="120"
+                            class="w-100 p-1 object-fit-contain" alt="">
+                          <img src="assets/media/svg/cancel-primary.svg"
+                            class="img-fluid cancel-primary-button js-remove-file" width="32" height="32" alt="">
+                        </div>
+                      </div>
+                      <div class="col-auto form__file-container">
+                        <div
+                          class="card border rounded-1 h-100px w-100px h-sm-120px w-sm-120px position-relative d-flex justify-content-center align-items-center text-center">
+                          <img src="assets/media/other/pdf.webp" width="120" height="120"
+                            class="w-100 p-1 object-fit-contain" alt="">
+                          <img src="assets/media/svg/cancel-primary.svg"
+                            class="img-fluid cancel-primary-button js-remove-file" width="32" height="32" alt="">
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <img src="assets/media/svg/add-more-img.svg"
+                          class="img-fluid h-100px w-100px h-sm-120px w-sm-120px cursor-pointer" width="120"
+                          height="120" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- second -->
+              <div id="second" class="tab" style="display: none;">
+                <h1 class="text-primary fs-1x fw-bold lh-base mb-3">Provide Lab Test Details</h1>
+                <p class="text-black-50  fs-4 fw-normal mb-7">Please fill Lab Information details below.</p>
+                <div class="row gy-9">
+                  <div class="col-lg-6">
+                    <label for="" class="text-black fs-4 fw-normal mb-2">Name of the test</label>
+                    <input class="form-control form-control-lg form-control-solid" type="text" name="text"
+                      autocomplete="off" placeholder="Type here..." value="" />
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="" class="text-black fs-4 fw-normal mb-2">Price of test</label>
+                    <input class="form-control form-control-lg form-control-solid" type="text" name="text"
+                      autocomplete="off" placeholder="Type here..." value="" />
+                  </div>
+                  <div class="col-lg-12">
+                    <label for="" class="text-black fs-4 fw-normal mb-2">About test</label>
+                    <textarea class="form-control form-control-lg form-control-solid" type="text" name="Address"
+                      autocomplete="off" placeholder="Type here..." value="" rows="5"></textarea>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="separator"></div>
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="" class="text-black fs-4 fw-normal mb-2">Name of the test</label>
+                    <input class="form-control form-control-lg form-control-solid" type="text" name="text"
+                      autocomplete="off" placeholder="Type here..." value="" />
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="row gy-2 mb-2 align-items-center">
+                      <div class="col">
+                        <label for="" class="text-black fs-4 fw-normal">Price of test</label>
+                      </div>
+                      <div class="col-auto">
+                        <a href="#" class="fs-4 fw-bold text-danger">Remove</a>
+                      </div>
+                    </div>
+                    <input class="form-control form-control-lg form-control-solid" type="text" name="text"
+                      autocomplete="off" placeholder="Type here..." value="" />
+                  </div>
+                  <div class="col-lg-12">
+                    <label for="" class="text-black fs-4 fw-normal mb-2">About test</label>
+                    <textarea class="form-control form-control-lg form-control-solid" type="text" name="Address"
+                      autocomplete="off" placeholder="Type here..." value="" rows="5"></textarea>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="separator"></div>
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="" class="text-black fs-4 fw-normal mb-2">Name of the test</label>
+                    <input class="form-control form-control-lg form-control-solid" type="text" name="text"
+                      autocomplete="off" placeholder="Type here..." value="" />
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="row gy-2 mb-2 align-items-center">
+                      <div class="col">
+                        <label for="" class="text-black fs-4 fw-normal">Price of test</label>
+                      </div>
+                      <div class="col-auto">
+                        <a href="#" class="fs-4 fw-bold text-danger">Remove</a>
+                      </div>
+                    </div>
+                    <input class="form-control form-control-lg form-control-solid" type="text" name="text"
+                      autocomplete="off" placeholder="Type here..." value="" />
+                  </div>
+                  <div class="col-lg-12">
+                    <label for="" class="text-black fs-4 fw-normal mb-2">About test</label>
+                    <textarea class="form-control form-control-lg form-control-solid" type="text" name="Address"
+                      autocomplete="off" placeholder="Type here..." value="" rows="5"></textarea>
+                  </div>
+                  <div class="col-lg-12 text-end mt-4">
+                    <a href="#" class="fs-4 fw-bold text-primary">Add more</a>
+                  </div>
+                </div>
+              </div>
+              <!-- third -->
+              <div id="third" class="tab" style="display: none;">
+                <h1 class="text-primary fs-1x fw-bold lh-base mb-3">Provide Time Slot Details</h1>
+                <p class="text-black-50  fs-4 fw-normal mb-7">Please fill Lab time slot details below.</p>
+                <div class="row gy-5 align-items-center">
+                  <div class="col-md-3">
+                    <div class="form-check form-check-custom ">
+                      <input class="form-check-input  h-25px w-25px" type="checkbox" value="" id="flexCheckboxSm"
+                        checked />
+                      <label class="form-check-label fs-6 fw-normal text-black" for="flexCheckboxSm">
+                        Monday
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-9">
+                    <div class="row align-items-center g-3 mb-5">
+                      <div class="col col-sm-auto">
+                        <input type="time" class="form-control py-6 h-55px time-custom w-sm-150px" autocomplete="off"
+                          name="time" placeholder="time" value="9:00 AM" />
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 fw-normal text-black">to</span>
+                      </div>
+                      <div class="col col-sm-auto">
+                        <input type="time" class="form-control  py-6 h-55px time-custom w-sm-150px" autocomplete="off"
+                          name="time" placeholder="time" value="5:30 PM" />
+                      </div>
+                    </div>
+                    <div class="row align-items-center g-3">
+                      <div class="col col-sm-auto">
+                        <input type="time" class="form-control  py-6 h-55px time-custom w-sm-150px" autocomplete="off"
+                          name="time" placeholder="time" value="9:00 AM" />
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 fw-normal text-black">to</span>
+                      </div>
+                      <div class="col col-sm-auto">
+                        <input type="time" class="form-control  py-6 h-55px time-custom w-sm-150px" autocomplete="off"
+                          name="time" placeholder="time" value="5:30 PM" />
+                      </div>
+                      <div class="col-sm-auto text-end">
+                        <button class="btn btn-flush">
+                          <img src="assets/media/svg/cancel-red.svg" width="32" height="32" alt="">
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 ">
+                    <a href="#" class="fs-4 fw-600 text-primary d-flex align-items-center justify-content-end"><img
+                        src="assets/media/svg/add-more-time.svg" class="me-2" width="18" height="18" alt=""> Add
+                      more</a>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="separator"></div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-check form-check-custom ">
+                      <input class="form-check-input  h-25px w-25px" type="checkbox" value="" id="flexCheckboxSm"
+                        checked />
+                      <label class="form-check-label fs-6 fw-normal text-black" for="flexCheckboxSm">
+                        Tuesday
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-9">
+                    <div class="row align-items-center g-3">
+                      <div class="col col-sm-auto">
+                        <input type="time" class="form-control  py-6 h-55px time-custom w-sm-150px" autocomplete="off"
+                          name="time" placeholder="time" value="9:00 AM" />
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 fw-normal text-black">to</span>
+                      </div>
+                      <div class="col col-sm-auto">
+                        <input type="time" class="form-control  py-6 h-55px time-custom w-sm-150px" autocomplete="off"
+                          name="time" placeholder="time" value="5:30 PM" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 ">
+                    <a href="#" class="fs-4 fw-600 text-primary d-flex align-items-center justify-content-end"><img
+                        src="assets/media/svg/add-more-time.svg" class="me-2" width="18" height="18" alt=""> Add
+                      more</a>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="separator"></div>
+                  </div>
+                  <div class="col-lg-12 mt-9">
+                    <div class="row gy-9">
+                      <div class="col">
+                        <div class="form-check form-check-custom ">
+                          <input class="form-check-input h-25px w-25px" type="checkbox" value="" id="flexCheckboxSm" />
+                          <label class="form-check-label fs-6 fw-normal text-black" for="flexCheckboxSm">
+                            Wednesday
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 fw-normal text-muted">Not available</span>
+                      </div>
+                      <div class="col-lg-12">
+                        <div class="separator"></div>
+                      </div>
+                      <div class="col">
+                        <div class="form-check form-check-custom ">
+                          <input class="form-check-input  h-25px w-25px" type="checkbox" value="" id="flexCheckboxSm" />
+                          <label class="form-check-label fs-6 fw-normal text-black" for="flexCheckboxSm">
+                            Thursday
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 fw-normal text-muted">Not available</span>
+                      </div>
+                      <div class="col-lg-12">
+                        <div class="separator"></div>
+                      </div>
+                      <div class="col">
+                        <div class="form-check form-check-custom ">
+                          <input class="form-check-input  h-25px w-25px" type="checkbox" value="" id="flexCheckboxSm" />
+                          <label class="form-check-label fs-6 fw-normal text-black" for="flexCheckboxSm">
+                            Friday
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 fw-normal text-muted">Not available</span>
+                      </div>
+                      <div class="col-lg-12">
+                        <div class="separator"></div>
+                      </div>
+                      <div class="col">
+                        <div class="form-check form-check-custom ">
+                          <input class="form-check-input  h-25px w-25px" type="checkbox" value="" id="flexCheckboxSm" />
+                          <label class="form-check-label fs-6 fw-normal text-black" for="flexCheckboxSm">
+                            Saturday
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 fw-normal text-muted">Not available</span>
+                      </div>
+                      <div class="col-lg-12">
+                        <div class="separator"></div>
+                      </div>
+                      <div class="col">
+                        <div class="form-check form-check-custom ">
+                          <input class="form-check-input h-25px w-25px" type="checkbox" value="" id="flexCheckboxSm" />
+                          <label class="form-check-label fs-6 fw-normal text-black" for="flexCheckboxSm">
+                            Sunday
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <span class="fs-4 fw-normal text-muted">Not available</span>
+                      </div>
+                      <div class="col-lg-12">
+                        <div class="separator"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 mt-7">
+                    <div class="separator"></div>
+                  </div>
+                  <div class="col-lg-4 mt-7">
+                    <label for="" class="text-black fs-4 fw-normal mb-2">Time for each slot</label>
+                    <input class="form-control form-control-lg form-control-solid" type="text" name="text"
+                      autocomplete="off" placeholder="hh:mm" value="">
+                  </div>
+                  <div class="col-lg-4 mt-7">
+                    <label for="" class="text-black fs-4 fw-normal mb-2">Number of Patient per slot</label>
+                    <input class="form-control form-control-lg form-control-solid" type="text" name="text"
+                      autocomplete="off" placeholder="Type here..." value="5">
+                  </div>
+                </div>
+              </div>
+              <button onclick="next()" class="btn btn-primary btn-lg fs-4 fw-bold py-6 px-12 mt-13 btnNext"
+                type="button" id="nextBtn">Continue</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--begin::Global Javascript Bundle(used by all pages)-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/plugins.bundle.js"></script>
+  <script src="assets/js/scripts.bundle.js"></script>
+  <!--end::Global Javascript Bundle-->
+
+  <!-- steps -->
+  <script type="text/javascript">
+    var currentTab = 0;
+    showTab(currentTab);
+
+    function showTab(n) {
+      var x = document.getElementsByClassName("tab");
+      x[n].style.display = "block";
+      // Always set the button text to "Continue"
+      document.getElementById("nextBtn").innerHTML = "Continue";
+      fixStepIndicator(n);
+      updateStepCount(n);
+    }
+
+    function next() {
+      var x = document.getElementsByClassName("tab");
+      if (currentTab + 1 < x.length) {
+        x[currentTab].style.display = "none";
+        currentTab++;
+        showTab(currentTab);
+      } else {
+        // Redirect to summary page
+        window.location.href = "under-verification.html";
+      }
+    }
+
+    function fixStepIndicator(n) {
+      var x = document.getElementsByClassName("step");
+      if (x.length > 0) {
+        for (var i = 0; i < x.length; i++) {
+          x[i].className = x[i].className.replace(" active", "");
+        }
+        x.className += " active";
+      }
+    }
+
+    function updateStepCount(n) {
+      document.getElementById("currentStep").textContent = n + 1; // Update step count
+    }
+  </script>
+
+  <!-- add image -->
+  <script type="text/javascript">
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        // $(input).parent().find(".edit-absolute").css("height", "32px");
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          $(input).parent().find('.imagePreview').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+    $(".imageUpload").change(function () {
+      readURL(this);
+    });
+  </script>
+
+  <!-- upload image -->
+  <script type="text/javascript">
+    const INPUT_FILE = document.querySelector('#upload-files');
+    const INPUT_CONTAINER = document.querySelector('#upload-container');
+    const FILES_LIST_CONTAINER = document.querySelector('#files-list-container');
+    const FILE_LIST = [];
+    let UPLOADED_FILES = [];
+    const multipleEvents = (element, eventNames, listener) => {
+      const events = eventNames.split(' ');
+      events.forEach(event => {
+        element.addEventListener(event, listener, false);
+      });
+    };
+    const previewFiles = () => {
+      FILES_LIST_CONTAINER.innerHTML = '';
+      if (FILE_LIST.length > 0) {
+        FILE_LIST.forEach((addedFile, index) => {
+          const content = `
+          <div class="col-auto form__file-container" >
+            <div class="card border rounded-1 h-100px w-100px h-sm-120px w-sm-120px position-relative d-flex justify-content-center align-items-center text-center">
+              ${getPreviewContent(addedFile.name, addedFile.file)}
+            <img src="assets/media/svg/cancel-primary.svg" class="img-fluid cancel-primary-button js-remove-file" width="32" height="32" alt="" data-index="${index}">
+            </div>
+          </div>`;
+          FILES_LIST_CONTAINER.insertAdjacentHTML('beforeEnd', content);
+        });
+      } else {
+        console.log('empty');
+        INPUT_FILE.value = '';
+      }
+    };
+    const getPreviewContent = (fileName, file) => {
+      const fileExtension = fileName.split('.').pop().toLowerCase();
+      if (fileExtension === 'jpg' || fileExtension === 'png' || fileExtension === 'jpeg' || fileExtension ===
+        "webp" || fileExtension === "svg") {
+        return `<img src="${URL.createObjectURL(file)}" width="120" height="120" class="file-preview w-100 p-1 object-fit-contain" alt="${fileName}">`;
+      } else if (fileExtension === 'pdf' || fileExtension === 'doc' || fileExtension === 'docx') {
+        return `<img src="assets/media/other/pdf.webp" width="120px" height="120px" class="file-icon  p-1" alt="">`;
+      } // Replace with the path to your PDF icon image
+    };
+    const fileUpload = () => {
+      if (FILES_LIST_CONTAINER) {
+        multipleEvents(INPUT_FILE, 'click dragstart dragover', () => {
+          INPUT_CONTAINER.classList.add('active');
+        });
+        multipleEvents(INPUT_FILE, 'dragleave dragend drop change blur', () => {
+          INPUT_CONTAINER.classList.remove('active');
+        });
+        INPUT_FILE.addEventListener('change', () => {
+          const files = [...INPUT_FILE.files];
+          console.log('changed');
+          files.forEach(file => {
+            const fileName = file.name;
+            const uploadedFile = {
+              name: fileName,
+              file: file, // Pass the file object to the uploadedFile
+            };
+            FILE_LIST.push(uploadedFile);
+          });
+          console.log(FILE_LIST); // final list of uploaded files
+          previewFiles();
+          UPLOADED_FILES = document.querySelectorAll('.js-remove-file');
+          removeFile();
+        });
+      }
+    };
+    const removeFile = () => {
+      UPLOADED_FILES = document.querySelectorAll('.js-remove-file');
+      if (UPLOADED_FILES) {
+        UPLOADED_FILES.forEach(file => {
+          file.addEventListener('click', function () {
+            const fileIndex = this.getAttribute('data-index');
+            FILE_LIST.splice(fileIndex, 1);
+            previewFiles();
+            removeFile();
+          });
+        });
+      } else {
+        [...INPUT_FILE.files] = [];
+      }
+    };
+    fileUpload();
+    removeFile();
+  </script>
+
+  <!-- country code -->
+  <script type="text/javascript">
+    // Format options
+    var optionFormat = function (item) {
+      if (!item.id) {
+        return item.text;
+      }
+
+      var span = document.createElement('span');
+      var imgUrl = item.element.getAttribute('data-kt-select2-country');
+      var template = '';
+
+      template += '<img src="' + imgUrl + '" class="rounded-circle w-30px h-30px me-2" alt="image"/>';
+      template += item.text;
+
+      span.innerHTML = template;
+
+      return $(span);
+    }
+
+    // Init Select2 --- more info: https://select2.org/
+    $('#kt_docs_select2_country').select2({
+      minimumResultsForSearch: -1,
+      dropdownCssClass: "padding-country-code",
+      templateSelection: optionFormat,
+      templateResult: optionFormat
+    });
+  </script>
+
+</body>
+
+</html>

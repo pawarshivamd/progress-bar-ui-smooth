@@ -1,0 +1,59 @@
+.object-fit-cover {
+    object-fit: cover !important;
+}
+.object-fit-contain {
+    object-fit: contain !important;
+}
+/* border-radius */
+.br-12px {
+    border-radius: 12px;
+}
+/* bg color */
+.bg-primary-first {
+    background-color: #3246aa;
+}
+.bg-primary-secondary {
+    background-color: #283888;
+}
+.bg-offwhite {
+    background-color: #fbfcff;
+}
+/* text color */
+.text-info-light {
+    color: #5b6bbb !important;
+}
+.text-5f677d {
+    color: #5f677d !important;
+}
+/* width */
+.w-fit-content {
+    width: fit-content !important;
+}
+.show-hide-password {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.cancel-primary-button {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    cursor: pointer;
+}
+.card.card-solid {
+    border-radius: 12px;
+    border: solid 1px #e0e3e9;
+    background-color: #f5f5f5;
+}
+.edit-absolute {
+    position: absolute;
+    bottom: 10px;
+    right: -2px;
+    cursor: pointer;
+    height: 0;
+    overflow: hidden;
+}
+.padding-country-code .select2-results__option{
+    padding: 6px !important;
+}
